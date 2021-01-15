@@ -23,3 +23,28 @@ d = 8
 e = 12
 print (e)
 # %%
+# Slide #26
+# Assignment Operators
+
+x = 2
+print(x)
+x = 'data'
+print(x)
+# %%
+x, y = 2, 3
+print(x, y)
+
+#swap statements
+x, y = y, x
+print(x, y)
+
+#Assignments can be chained
+x = y = z = 3
+print(x, y, z)
+#%%
+# exponentiation function in python
+# 7^2 = 49
+# however in python it is 
+y = 7**2
+print(y)
+# %%
