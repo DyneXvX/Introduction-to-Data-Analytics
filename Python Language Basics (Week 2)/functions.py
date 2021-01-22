@@ -49,5 +49,42 @@ def subtraction(a=0, b=0):
 
 subtraction(100, 27)
 
-##stopping for lunch at 8:51 seconds in the video.
+
+# %%
+#returning multiple values
+
+def f():
+    a = 5
+    b = 6
+    c = 7
+    return a,b,c
+
+f()
+
+# %%
+import re
+# re is for regular expressions
+
+states = [' Alabama', 'Georgia!' , 'Georgia', 'georgia',
+' FlOrida', 'south carolina##', 'West virginia?']
+
+print('So our states data is all jacked up.')
+print(states)
+print()
+
+print('We need to clean this so we build a clean function')
+def clean_strings(strings):
+    result = []
+    for value in strings:
+        value = value.strip()
+        #striping the random spaces
+        value = re.sub('[!#?]' , '' , value)
+        #removing all of these random char and spaces.
+        value = value.title()
+        #capitalizing the title/first letter
+        result.append(value)
+    return result
+
+clean_strings(states)
+
 # %%
