@@ -1,3 +1,4 @@
+#%%
 from lab2_bmi import *
 from lab2_paint import *
 print('Welcome to Python program.')
@@ -13,3 +14,5 @@ print('Enter your menu option: ')
 paint()
 print('')
 bmi()
+
+# %%
