@@ -1,9 +1,9 @@
-#%%
+# %%
 def bmi():
     print('Welcome to the body mass index (BMI) calculator.')
     weight = int(input('Enter your weight in pounds: '))
     height = int(input('Enter your height in inches: '))
-    bmi = (weight * 703) / (height * height) 
+    bmi = (weight * 703) / (height * height)
 
     if bmi < 18.5:
         message = "underweight"
@@ -14,15 +14,14 @@ def bmi():
     else:
         message = "obese"
 
+    print('Your BMI is {bmi: .2f}. According to NIH, you are {message}'.format(
+        **locals()))
+    print()
 
-    print('Your BMI is {bmi}. According to NIH, you are {message}'.format(**locals()))
 
-    
-
-bmi()
 # %%
 
-#BMI = (weight in pounds x 703) / (height in inches x height in inches)
+# BMI = (weight in pounds x 703) / (height in inches x height in inches)
 # BMI Values
 
 # Underweight: less than 18.5
