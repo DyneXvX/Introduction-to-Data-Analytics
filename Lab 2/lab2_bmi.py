@@ -1,8 +1,21 @@
 # %%
 def bmi():
     print('Welcome to the body mass index (BMI) calculator.')
-    weight = int(input('Enter your weight in pounds: '))
-    height = int(input('Enter your height in inches: '))
+
+    while True:
+        try:
+            weight = int(input('Enter your weight in pounds: '))
+            break
+        except ValueError:
+            print('Please input your weight as a number in pounds')
+
+    while True:
+        try:
+            height = int(input('Enter your height in inches: '))
+            break
+        except ValueError:
+            print('Please input your height as a number in inches.')
+
     bmi = (weight * 703) / (height * height)
 
     if bmi < 18.5:
@@ -14,7 +27,7 @@ def bmi():
     else:
         message = "obese"
 
-    print('Your BMI is {bmi: .2f}. According to NIH, you are {message}'.format(
+    print('\nYour BMI is {bmi: .2f}. According to NIH, you are {message}'.format(
         **locals()))
     print()
 

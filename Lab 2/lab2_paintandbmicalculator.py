@@ -13,7 +13,14 @@ def main():
     print('     ', 'Enter 2 for calculating Body Mass Index')
     print('     ', 'Enter any other value to quit the program.')
     print()
-    choice = int(input('Enter your menu option: '))
+
+    while True:
+        try:
+            choice = int(input('Enter your menu option: '))
+            break
+        except ValueError:
+            print("Your choice must be a number. Please enter a valid choice.")
+
     print()
 
     if choice == 1:
@@ -23,6 +30,7 @@ def main():
         bmi()
         main()
     else:
+        print('Exiting program:')
         print('Thank you for using a (c)Justin Thoms Python Program')
         exit()
 

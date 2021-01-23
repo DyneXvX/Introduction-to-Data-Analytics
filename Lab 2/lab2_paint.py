@@ -3,11 +3,16 @@ def paint():
     print()
     print('Welcome to the paint needed calculator.')
     print('---------------------------------------')
-    length = int(input('Enter the length of the room: '))
-    width = int(input('Enter the width of the room: '))
-    height = int(input('Enter the height of the room: '))
-    doors = int(input('How many doors are in the room? '))
-    windows = int(input('How many windows are in the room? '))
+    while True:
+        try:
+            length = int(input('Enter the length of the room: '))
+            width = int(input('Enter the width of the room: '))
+            height = int(input('Enter the height of the room: '))
+            doors = int(input('How many doors are in the room? '))
+            windows = int(input('How many windows are in the room? '))
+            break
+        except ValueError:
+            print('Your values need to be in numbers please.')
 
     totaldoors = 25 * doors
     totalwindow = 10 * windows
@@ -17,17 +22,17 @@ def paint():
     paintneeded = (area / 315)
 
     if (doors > 1 and windows <= 1):
-        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long\
-        by {height: .2f} feet height with {doors} doors and {windows} window'.format(**locals()))
+        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long \
+    by {height: .2f} feet height with {doors} doors and {windows} window'.format(**locals()))
     elif (doors <= 1 and windows > 1):
-        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long\
-        by {height: .2f} feet height with {doors} door and {windows} windows'.format(**locals()))
+        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long \
+    by {height: .2f} feet height with {doors} door and {windows} windows'.format(**locals()))
     elif (doors > 1 and windows > 1):
-        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long\
-        by {height: .2f} feet height with {doors} doors and {windows} windows'.format(**locals()))
+        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long \
+    by {height: .2f} feet height with {doors} doors and {windows} windows'.format(**locals()))
     else:
-        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long\
-        by {height: .2f} feet height with {doors} door and {windows} window'.format(**locals()))
+        print('{paintneeded: .2f} gallons of paint are needed to a paint a room {width: .2f} feet wide by {length: .2f} feet long \
+    by {height: .2f} feet height with {doors} door and {windows} window'.format(**locals()))
 
     print()
 
