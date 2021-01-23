@@ -4,14 +4,14 @@ def bmi():
 
     while True:
         try:
-            weight = int(input('Enter your weight in pounds: '))
+            weight = float(input('Enter your weight in pounds: '))
             break
         except ValueError:
             print('Please input your weight as a number in pounds')
 
     while True:
         try:
-            height = int(input('Enter your height in inches: '))
+            height = float(input('Enter your height in inches: '))
             break
         except ValueError:
             print('Please input your height as a number in inches.')

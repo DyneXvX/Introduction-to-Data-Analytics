@@ -5,11 +5,11 @@ def paint():
     print('---------------------------------------')
     while True:
         try:
-            length = int(input('Enter the length of the room: '))
-            width = int(input('Enter the width of the room: '))
-            height = int(input('Enter the height of the room: '))
-            doors = int(input('How many doors are in the room? '))
-            windows = int(input('How many windows are in the room? '))
+            length = float(input('Enter the length of the room: '))
+            width = float(input('Enter the width of the room: '))
+            height = float(input('Enter the height of the room: '))
+            doors = float(input('How many doors are in the room? '))
+            windows = float(input('How many windows are in the room? '))
             break
         except ValueError:
             print('Your values need to be in numbers please.')
