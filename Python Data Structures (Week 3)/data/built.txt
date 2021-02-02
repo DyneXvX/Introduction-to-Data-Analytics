@@ -1,0 +1,11 @@
+This is the start of the file. 
+55 is an Odd Number
+96 is an Even Number
+72 is an Even Number
+59 is an Odd Number
+58 is an Even Number
+62 is an Even Number
+63 is an Odd Number
+94 is an Even Number
+80 is an Even Number
+94 is an Even Number
