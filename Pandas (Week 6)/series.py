@@ -60,3 +60,21 @@ print('np.exp(obj2)...... yeah no clue')
 print(np.exp(obj2))
 print()
 # %%
+# Ordered Dictionary
+
+sData = {'Ohio': 35000, 'Texas': 71000, 'Oregon': 16000, 'Utah': 5000}
+obj3 = pd.Series(sData)
+
+print(obj3)
+print()
+
+print('Check the value for a index in the dictionary')
+print(obj3[1])
+print()
+print(obj3[3])
+if((obj3[1]) > (obj3[3])):
+    print('Index 1 is greater then index 3')
+else:
+    print('fail')
+
+# %%
