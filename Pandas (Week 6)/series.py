@@ -5,7 +5,7 @@ from pandas import Series, DataFrame
 # one dimensional array
 
 obj = pd.Series([4,7,-5,3])
-print(obj)
+print(obj[0])
 print()
 
 print(obj.values)
