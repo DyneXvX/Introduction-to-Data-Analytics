@@ -31,10 +31,11 @@ income_frame['Average'] = average
 print('Average income per county with their average over the course of 5 years.')
 print()
 print(income_frame)
+income_frame.to_csv('Exported Data/averageIncome.csv')
 
 # %%
 #Death Rates from Opioid
-print('The total death rate for each county due to Opioid Overdose related problems.')
+print('The total death rate for each county due to Opioid Overdose related problems. (Percent of Deaths were Opioid Related.)')
 print(death_frame)
 
 # %%
