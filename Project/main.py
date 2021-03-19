@@ -21,7 +21,8 @@ population_frame['Average'] = average
 print('Total population per county with their average over the course of 5 years.')
 print()
 print(population_frame)
-population_frame.to_csv('Exported Data/population.csv')
+#population_frame.to_csv('Exported Data/population.csv')
+
 # %%
 #Income Numbers
 income_frame[['2015', '2016', '2017', '2018', '2019']] = income_frame[['2015', '2016', '2017', '2018', '2019']].apply(pd.to_numeric)
@@ -31,11 +32,17 @@ income_frame['Average'] = average
 print('Average income per county with their average over the course of 5 years.')
 print()
 print(income_frame)
-income_frame.to_csv('Exported Data/averageIncome.csv')
+#income_frame.to_csv('Exported Data/averageIncome.csv')
 
 # %%
 #Death Rates from Opioid
+death_frame[['2015', '2016', '2017', '2018', '2019']] = death_frame[['2015', '2016', '2017', '2018', '2019']].apply(pd.to_numeric)
+sum_column = death_frame['2015'] + death_frame['2016'] + death_frame['2017'] + death_frame['2018'] + death_frame['2019']
+average = sum_column / 5
+death_frame['Average'] = average
 print('The total death rate for each county due to Opioid Overdose related problems. (Percent of Deaths were Opioid Related.)')
+print()
 print(death_frame)
+#death_frame.to_csv('Exported Data/averageDeathRate.csv')
 
 # %%
