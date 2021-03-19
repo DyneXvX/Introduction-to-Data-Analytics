@@ -46,3 +46,9 @@ print(death_frame)
 #death_frame.to_csv('Exported Data/averageDeathRate.csv')
 
 # %%
+#Total 5 Year Average of all
+TotalValues = pd.concat([population_frame , income_frame,death_frame],axis=1)
+print(TotalValues)
+#TotalValues.to_excel('Exported Data/total.xlsx')
+
+# %%
