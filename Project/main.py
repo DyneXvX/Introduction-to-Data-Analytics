@@ -2,13 +2,13 @@
 import pandas as pd
 import numpy as np
 
-fl_population = np.genfromtxt('DataSets/population.csv', dtype=str, delimiter=',', skip_header=2)
+fl_population = np.genfromtxt('DataSets/Dataset 15 - Population.csv', dtype=str, delimiter=',', skip_header=2)
 population_frame = pd.DataFrame(fl_population, columns=['County', '2015', '2016', '2017', '2018', '2019'])
 
-average_income = np.genfromtxt('DataSets/Dataset 6.csv', dtype=str, delimiter=',', skip_header=2)
+average_income = np.genfromtxt('DataSets/Dataset 6 - AverageIncome.csv', dtype=str, delimiter=',', skip_header=2)
 income_frame = pd.DataFrame(average_income, columns=['County', '2015', '2016', '2017', '2018', '2019'])
 
-death_rates = np.genfromtxt('DataSets/deathRates.csv', dtype=str, delimiter=',' , skip_header=1)
+death_rates = np.genfromtxt('DataSets/Dataset 1 - DeathRates.csv', dtype=str, delimiter=',' , skip_header=1)
 death_frame = pd.DataFrame(death_rates, columns=['County', '2015', '2016', '2017', '2018', '2019'])
 
 
@@ -21,7 +21,7 @@ population_frame['Average'] = average
 print('Total population per county with their average over the course of 5 years.')
 print()
 print(population_frame)
-#population_frame.to_csv('Exported Data/population.csv')
+#population_frame.to_excel('Exported Data/population.xlsx')
 
 # %%
 #Income Numbers
