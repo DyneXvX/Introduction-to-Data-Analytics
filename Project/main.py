@@ -17,7 +17,7 @@ death_frame = pd.DataFrame(death_rates, columns=['County', '2015', '2016', '2017
 population_frame[['2015', '2016', '2017', '2018', '2019']] = population_frame[['2015', '2016', '2017', '2018', '2019']].apply(pd.to_numeric)
 sum_column = population_frame['2015'] + population_frame['2016'] + population_frame['2017'] + population_frame['2018'] + population_frame['2019']
 average = sum_column / 5
-population_frame['Average'] = average
+population_frame['Average Population'] = average
 print('Total population per county with their average over the course of 5 years.')
 print()
 print(population_frame)
@@ -28,7 +28,7 @@ print(population_frame)
 income_frame[['2015', '2016', '2017', '2018', '2019']] = income_frame[['2015', '2016', '2017', '2018', '2019']].apply(pd.to_numeric)
 sum_column = income_frame['2015'] + income_frame['2016'] + income_frame['2017'] + income_frame['2018'] + income_frame['2019']
 average = sum_column / 5
-income_frame['Average'] = average
+income_frame['Average Income'] = average
 print('Average income per county with their average over the course of 5 years.')
 print()
 print(income_frame)
@@ -39,7 +39,7 @@ print(income_frame)
 death_frame[['2015', '2016', '2017', '2018', '2019']] = death_frame[['2015', '2016', '2017', '2018', '2019']].apply(pd.to_numeric)
 sum_column = death_frame['2015'] + death_frame['2016'] + death_frame['2017'] + death_frame['2018'] + death_frame['2019']
 average = sum_column / 5
-death_frame['Average'] = average
+death_frame['Average Death Rate'] = average
 print('The total death rate for each county due to Opioid Overdose related problems. (Percent of Deaths were Opioid Related.)')
 print()
 print(death_frame)
@@ -51,4 +51,11 @@ TotalValues = pd.concat([population_frame , income_frame,death_frame],axis=1)
 print(TotalValues)
 #TotalValues.to_excel('Exported Data/total.xlsx')
 
+# %%
+
+column_1 = TotalValues['Average Income']
+column_2 = TotalValues['Average Death Rate']
+
+correlation = column_1.corr(column_2)
+print(correlation)
 # %%
