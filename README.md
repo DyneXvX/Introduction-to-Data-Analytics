@@ -1,5 +1,5 @@
 # Introduction to Data Analytics
-Projects from the Universtity of North Florida
+Projects from the University of North Florida
 <br />
 Introduction to Data Analytics - CAP 4784
 <br />
